@@ -1,4 +1,4 @@
-package server.repository.message;
+package server.repository.messages;
 
 import java.util.Date;
 
