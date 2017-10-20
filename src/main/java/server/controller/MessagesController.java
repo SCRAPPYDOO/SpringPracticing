@@ -20,6 +20,7 @@ public class MessagesController {
 	@Autowired
 	private MessagesService messageService;
 	
+	@Autowired
 	@RequestMapping("/messages/{fromWho}/{toWhoom}")
 	public ResponseEntity<?> getMessages(@PathVariable int fromWho, @PathVariable int toWhoom) { 
 		List<Message> list = messageService.getMessages(fromWho, toWhoom);
