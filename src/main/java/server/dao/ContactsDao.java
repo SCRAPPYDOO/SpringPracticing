@@ -25,9 +25,4 @@ public class ContactsDao {
 	public void deleteContact(Contact contact) {
 		contactsRepository.delete(contact);
 	}
-
-	public List<Contact> getContacts(int owner) {
-		return contactsRepository.findAllByOwner(owner);
-	}
-
 }

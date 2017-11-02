@@ -6,6 +6,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import server.repository.conversation.Conversation;
 import server.repository.messages.Message;
 import server.repository.messages.MessagesRepository;
 
@@ -20,8 +21,8 @@ public class MessageDao {
 		return messageRespository.save(message);
 	}
 
-	public List<Message> getMessages(int fromWho, int toWhoom) {
-		return messageRespository.findByFromWhoAndToWhoom(fromWho, toWhoom);
+	public List<Message> getMessages(Conversation conversation) {
+		return messageRespository.findByConversation(conversation);
 	}
 
 }

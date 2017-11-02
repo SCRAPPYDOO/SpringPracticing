@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import server.repository.conversation.Conversation;
 import server.repository.messages.Message;
 import server.service.MessagesService;
 
@@ -20,11 +21,9 @@ public class MessagesController {
 	@Autowired
 	private MessagesService messageService;
 	
-	@Autowired
-	@RequestMapping("/messages/{fromWho}/{toWhoom}")
-	public ResponseEntity<?> getMessages(@PathVariable int fromWho, @PathVariable int toWhoom) { 
-		List<Message> list = messageService.getMessages(fromWho, toWhoom);
-		list.addAll(messageService.getMessages(toWhoom, fromWho));
+	@RequestMapping("/messages/{conversation}")
+	public ResponseEntity<?> getMessages(@PathVariable Conversation conversation) { 
+		List<Message> list = messageService.getMessages(conversation);
 		return new ResponseEntity<List<Message>>(list, HttpStatus.OK);
 	}
 	

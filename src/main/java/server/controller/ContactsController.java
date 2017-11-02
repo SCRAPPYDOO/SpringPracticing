@@ -10,10 +10,10 @@ import org.springframework.web.bind.annotation.RestController;
 import server.repository.contacts.Contact;
 import server.service.ContactsService;
 
-@RestController
+//@RestController
 public class ContactsController {
 	
-	@Autowired
+/*	/@Autowired
 	ContactsService contactsService;
 	
 	@RequestMapping(method=RequestMethod.POST, value="/contacts")
@@ -34,6 +34,6 @@ public class ContactsController {
 	@RequestMapping(method=RequestMethod.DELETE, value="/contacts/{owner}")
 	public List<Contact> getContacts(int owner) {
 		return contactsService.getContacts(owner);
-	}
+	}*/
 	
 }

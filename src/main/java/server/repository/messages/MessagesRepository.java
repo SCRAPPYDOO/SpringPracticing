@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.springframework.data.repository.CrudRepository;
 
+import server.repository.conversation.Conversation;
+
 public interface MessagesRepository extends CrudRepository<Message, Long> {
-	List<Message> findByFromWhoAndToWhoom(int fromWho, int toWhoom);
+	List<Message> findByConversation(Conversation conversation);
 }

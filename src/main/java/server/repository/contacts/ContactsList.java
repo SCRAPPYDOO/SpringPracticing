@@ -4,7 +4,6 @@ import java.util.List;
 
 import javax.persistence.Entity;
 
-@Entity
 public class ContactsList {
 	
 	
@@ -12,7 +11,7 @@ public class ContactsList {
 	Contact owner;
 	List<Contact> listOfContacts;
 	
-	public void test() {
+	/*public void test() {
 		listOfContacts.stream()getClass().li
-	}
+	}*/
 }

@@ -8,11 +8,11 @@ import org.springframework.stereotype.Service;
 import server.dao.ContactsDao;
 import server.repository.contacts.Contact;
 
-@Service
+//@Service
 public class ContactsService {
 
-	@Autowired
-	ContactsDao contactsDao;
+	//@Autowired
+	/*ContactsDao contactsDao;
 	
 	public void addContact(Contact contact) {
 		contactsDao.addContact(contact);
@@ -31,7 +31,7 @@ public class ContactsService {
 	
 	public List<Contact> getContacts(int owner) {
 		return contactsDao.getContacts(owner);
-	}
+	}*/
 
 
 }
